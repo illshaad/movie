@@ -1,0 +1,17 @@
+.search-container {
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 3px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 3px;
+  border-radius: 50px;
+}

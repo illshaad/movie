@@ -1,0 +1,10 @@
+body,
+html img {
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/background-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.9);
+}

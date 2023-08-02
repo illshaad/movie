@@ -1,0 +1,35 @@
+.charts {
+  padding-top: 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.title-statistics {
+  font-size: 20px;
+  color: white;
+}
+
+.header-statistic {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.container-statistics {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+select.select-date {
+  width: 60px;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 3px;
+  border-radius: 50px;
+}

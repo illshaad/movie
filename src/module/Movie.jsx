@@ -48,15 +48,15 @@ export default function Movie({
         <div className="modal-content-information-sub">
           <div>
             <div className="modal-information">Budget</div>
-            {roundedNumber(budget)} MS
+            {roundedNumber(budget)} M$
           </div>
           <div>
             <div className="modal-information">Revenus</div>
-            {roundedNumber(revenue)} MS
+            {roundedNumber(revenue)} M$
           </div>
           <div>
             <div className="modal-information">Recettes</div>
-            {checkNumberPositiveOrNegative(roundedRecettes(budget, revenue))} MS
+            {checkNumberPositiveOrNegative(roundedRecettes(budget, revenue))} M$
           </div>
         </div>
         <div className="synopsis">Synopsis</div>
@@ -81,7 +81,7 @@ export default function Movie({
         {img && <img src={img} alt="poster" />}
         <span className="container-card-information">
           {title.substring(0, 12) + " ... "}
-          {checkNumberPositiveOrNegative(roundedRecettes(budget, revenue))} MS
+          {checkNumberPositiveOrNegative(roundedRecettes(budget, revenue))} M$
         </span>
         <span className="card-date">{year}</span>
       </div>

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 import "../../styles/Home.css";
+
 import InputSearch from "../Search/InputSearch";
 export default function Information({ isBooleanValue }) {
   const title = isBooleanValue

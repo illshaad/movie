@@ -1,7 +1,11 @@
-import "../../styles/Charts.css";
-import SelectInput from "./SelectInput";
 import { useStore } from "zustand";
+
+import SelectInput from "./SelectInput";
+
 import chartsStore from "../../stores/charts.store";
+
+import "../../styles/Charts.css";
+
 export default function HeaderStatistic() {
   const { selectedDateStart, selectedDateEnd, fetchMoviesDateRange } =
     useStore(chartsStore);

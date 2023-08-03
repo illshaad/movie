@@ -1,5 +1,6 @@
 import { useStore } from "zustand";
 import "../../styles/Charts.css";
+
 import {
   ComposedChart,
   Line,
@@ -12,6 +13,8 @@ import {
 } from "recharts";
 
 import chartsStore from "../../stores/charts.store";
+
+//Donnée en dur si jamais la requet n'est pas faites et si il ne trouve pas de donnée
 
 const data = [
   { name: "2018", "Nombres de films": 10, "Notes moyenne": 20 },

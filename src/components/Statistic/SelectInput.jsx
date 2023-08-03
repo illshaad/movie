@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 import { useStore } from "zustand";
+
 import chartsStore from "../../stores/charts.store";
 
 export default function SelectInput({ dateRange }) {

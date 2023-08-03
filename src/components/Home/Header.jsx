@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 
 import { useStore } from "zustand";
+
 import "../../styles/Home.css";
 import Logo from "../../assets/movie-finder.png";
+
 import nextStepStore from "../../stores/header.store";
 
 export default function Header({ isBooleanValue, setToTrue, setToFalse }) {

@@ -1,6 +1,7 @@
 import { useStore } from "zustand";
 
 import displayMoviesStore from "../../stores/display.store";
+
 import "../../styles/Home.css";
 
 export default function DisplayAllMovie() {

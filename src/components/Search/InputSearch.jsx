@@ -1,6 +1,7 @@
 import { useStore } from "zustand";
 
 import "../../styles/Input.css";
+
 import moviesStore from "../../stores/movies.store";
 
 export default function InputSearch() {

@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import { useStore } from "zustand";
 
 import Movie from "../../module/Movie";
+import Arrow from "../../module/Arrow";
 
 import displayMoviesStore from "../../stores/display.store";
 import moviesStore from "../../stores/movies.store";
 
 import "../../styles/Home.css";
+
 import { nextMovies, prevMovies } from "../../utils/movie.utils";
-import Arrow from "../../module/Arrow";
 
 export default function Movies({ isBooleanValue }) {
   const [currentIndex, setCurrentIndex] = useState(0);

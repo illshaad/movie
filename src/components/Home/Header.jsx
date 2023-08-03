@@ -13,7 +13,7 @@ export default function Header({ isBooleanValue, setToTrue, setToFalse }) {
       <img className="logo" src={Logo} alt="logo" />
       <div className="header-links">
         <span
-          className={`span-cursor ${!isBooleanValue ? "active" : "not-active"}`}
+          className={` ${!isBooleanValue ? "active" : "not-active"}`}
           onClick={() => {
             nextStep(0), setToFalse();
           }}
@@ -22,7 +22,7 @@ export default function Header({ isBooleanValue, setToTrue, setToFalse }) {
         </span>
         <span className="vertical-span" />
         <span
-          className={`span-cursor ${isBooleanValue ? "active" : "not-active"}`}
+          className={` ${isBooleanValue ? "active" : "not-active"}`}
           onClick={() => {
             {
               nextStep(1), setToTrue();

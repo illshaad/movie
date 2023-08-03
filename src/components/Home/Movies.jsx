@@ -5,14 +5,12 @@ import { useStore } from "zustand";
 
 import Movie from "../../module/Movie";
 
-import leftArrow from "../../assets/left-arrow.png";
-import rightArrow from "../../assets/right-arrow.png";
-
 import displayMoviesStore from "../../stores/display.store";
 import moviesStore from "../../stores/movies.store";
 
 import "../../styles/Home.css";
 import { nextMovies, prevMovies } from "../../utils/movie.utils";
+import Arrow from "../../module/Arrow";
 
 export default function Movies({ isBooleanValue }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,31 +53,34 @@ export default function Movies({ isBooleanValue }) {
       ) : (
         <>
           {currentIndex > 0 ? (
-            <div
-              style={{ cursor: "pointer" }}
-              onClick={() =>
-                prevMovies(currentIndex, setCurrentIndex, fourElements)
-              }
-            >
-              <img className="arrow" src={leftArrow} alt="Left Arrow" />
-            </div>
-          ) : null}
+            <Arrow
+              direction={"left"}
+              color={true}
+              prevMovies={prevMovies}
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
+              fourElements={fourElements}
+            />
+          ) : (
+            <Arrow direction={"left"} />
+          )}
 
           {fourElements[currentIndex]?.map((movie) => (
             <Movie key={movie.id} {...movie} />
           ))}
-          <div>
-            {currentIndex < fourElements.length - 1 ? (
-              <div
-                style={{ cursor: "pointer" }}
-                onClick={() =>
-                  nextMovies(currentIndex, setCurrentIndex, fourElements)
-                }
-              >
-                <img className="arrow" src={rightArrow} alt="Right Arrow" />
-              </div>
-            ) : null}
-          </div>
+
+          {currentIndex < fourElements.length - 1 ? (
+            <Arrow
+              direction={"right"}
+              color={true}
+              nextMovies={nextMovies}
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
+              fourElements={fourElements}
+            />
+          ) : (
+            <Arrow direction={"right"} />
+          )}
         </>
       )}
     </div>

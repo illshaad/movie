@@ -38,7 +38,7 @@ export default function Movie({
 
   const renderModalContent = () => (
     <div className="modal-content">
-      <img src={img} alt="poster" />
+      <img style={{ width: "200px" }} src={img} alt="poster" />
       <div>
         <div className="modal-titre">
           <div className="title">{title}</div>

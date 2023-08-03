@@ -26,9 +26,11 @@
 }
 
 select.select-date {
+  background: #172c48;
+  color: #2787f9;
   width: 60px;
   flex: 1;
-  border: none;
+  border-color: #2787f9;
   outline: none;
   padding: 3px;
   border-radius: 50px;

@@ -16,7 +16,7 @@ const StarRating = () => {
             width="18"
             height="18"
             viewBox="0 0 24 24"
-            fill={starNumber <= rating ? "#EFE0AE" : "#A4B8CE"}
+            fill={starNumber <= rating ? "#A4B8CE" : "#172C48"}
             stroke="currentColor"
             strokeWidth="0"
             strokeLinecap="round"

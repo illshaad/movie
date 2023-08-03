@@ -10,7 +10,7 @@ export default function Ratings({ vote_average }) {
     const ratingElements = [];
 
     for (let i = 0; i < elements; i++) {
-      const color = i < noteScale ? "#EFE0AE" : "#A4B8CE";
+      const color = i < noteScale ? "#A4B8CE" : "#172C48";
 
       ratingElements.push(
         <div key={i}>

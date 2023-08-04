@@ -14,7 +14,7 @@ const options = {
 const moviesStore = create((set, get) => ({
   allMovies: [],
   allMoviesFilter: [],
-  fourElements: [],
+  fourMovies: [],
   loading: false,
   error: null,
 
@@ -43,7 +43,7 @@ const moviesStore = create((set, get) => ({
     for (let i = 0; i < allMovies?.length; i += 4) {
       chunk.push(allMovies?.slice(i, i + 4));
     }
-    set({ fourElements: chunk });
+    set({ fourMovies: chunk });
   },
 
   findMovies: (event) => {

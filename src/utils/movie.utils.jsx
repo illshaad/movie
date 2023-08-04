@@ -20,12 +20,12 @@ export const calculedBudget = (budget, revenue) => revenue - budget;
 export const roundedRecettes = (budget, revenue) =>
   roundedNumber(calculedBudget(budget, revenue));
 
-export const nextMovies = (currentIndex, setCurrentIndex, fourElements) => {
+export const nextMovies = (currentIndex, setCurrentIndex, fourMovies) => {
   const newIndex = currentIndex + 1;
-  setCurrentIndex(newIndex >= fourElements.length ? 0 : newIndex);
+  setCurrentIndex(newIndex >= fourMovies.length ? 0 : newIndex);
 };
 
-export const prevMovies = (currentIndex, setCurrentIndex, fourElements) => {
+export const prevMovies = (currentIndex, setCurrentIndex, fourMovies) => {
   const newIndex = currentIndex - 1;
-  setCurrentIndex(newIndex < 0 ? fourElements.length - 1 : newIndex);
+  setCurrentIndex(newIndex < 0 ? fourMovies.length - 1 : newIndex);
 };

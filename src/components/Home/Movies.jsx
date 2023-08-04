@@ -19,7 +19,7 @@ export default function Movies({ isBooleanValue }) {
   const {
     allMoviesFilter,
     fetchMoviesPromisAll,
-    fourElements,
+    fourMovies,
     loading,
     error,
     chunkMovies,
@@ -60,24 +60,24 @@ export default function Movies({ isBooleanValue }) {
               prevMovies={prevMovies}
               currentIndex={currentIndex}
               setCurrentIndex={setCurrentIndex}
-              fourElements={fourElements}
+              fourMovies={fourMovies}
             />
           ) : (
             <Arrow direction={"left"} />
           )}
 
-          {fourElements[currentIndex]?.map((movie) => (
+          {fourMovies[currentIndex]?.map((movie) => (
             <Movie key={movie.id} {...movie} />
           ))}
 
-          {currentIndex < fourElements.length - 1 ? (
+          {currentIndex < fourMovies.length - 1 ? (
             <Arrow
               direction={"right"}
               color={true}
               nextMovies={nextMovies}
               currentIndex={currentIndex}
               setCurrentIndex={setCurrentIndex}
-              fourElements={fourElements}
+              fourMovies={fourMovies}
             />
           ) : (
             <Arrow direction={"right"} />

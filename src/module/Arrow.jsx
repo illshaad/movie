@@ -7,7 +7,7 @@ export default function Arrow({
   nextMovies,
   currentIndex,
   setCurrentIndex,
-  fourElements,
+  fourMovies,
 }) {
   const buttonStyle = {
     backgroundColor: color ? "#172C48" : "grey",
@@ -26,8 +26,8 @@ export default function Arrow({
       style={buttonStyle}
       onClick={() =>
         direction === "left"
-          ? prevMovies(currentIndex, setCurrentIndex, fourElements)
-          : nextMovies(currentIndex, setCurrentIndex, fourElements)
+          ? prevMovies(currentIndex, setCurrentIndex, fourMovies)
+          : nextMovies(currentIndex, setCurrentIndex, fourMovies)
       }
     >
       {direction === "left" ? "\u2190" : "\u2192"}
@@ -37,10 +37,10 @@ export default function Arrow({
 
 Arrow.propTypes = {
   direction: PropTypes.string.isRequired,
-  color: PropTypes.bool.isRequired,
-  prevMovies: PropTypes.func.isRequired,
-  nextMovies: PropTypes.func.isRequired,
-  currentIndex: PropTypes.number.isRequired,
-  setCurrentIndex: PropTypes.func.isRequired,
-  fourElements: PropTypes.number.isRequired,
+  color: PropTypes.bool,
+  prevMovies: PropTypes.func,
+  nextMovies: PropTypes.func,
+  currentIndex: PropTypes.number,
+  setCurrentIndex: PropTypes.func,
+  fourMovies: PropTypes.array,
 };

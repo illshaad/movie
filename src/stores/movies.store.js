@@ -12,6 +12,7 @@ const options = {
 };
 
 const moviesStore = create((set, get) => ({
+  allMovies: [],
   allMoviesFilter: [],
   fourMovies: [],
   loading: false,
@@ -30,26 +31,26 @@ const moviesStore = create((set, get) => ({
         return fetchDetailMovie.json();
       });
       const responses = await Promise.all(listMoviesPromis);
-      set({ allMoviesFilter: responses, loading: false });
+      set({ allMovies: responses, allMoviesFilter: responses, loading: false });
     } catch (error) {
       set({ error, loading: false });
     }
   },
 
   chunkMovies: () => {
-    const { allMoviesFilter } = get();
+    const { allMovies } = get();
     const chunk = [];
-    for (let i = 0; i < allMoviesFilter?.length; i += 4) {
-      chunk.push(allMoviesFilter?.slice(i, i + 4));
+    for (let i = 0; i < allMovies?.length; i += 4) {
+      chunk.push(allMovies?.slice(i, i + 4));
     }
     set({ fourMovies: chunk });
   },
 
   findMovies: (event) => {
-    const { allMoviesFilter } = get();
+    const { allMovies } = get();
     const searchValue = event.target.value.toLowerCase();
 
-    const filteredMovies = allMoviesFilter.filter((movie) =>
+    const filteredMovies = allMovies.filter((movie) =>
       movie.title.toLowerCase().includes(searchValue)
     );
     set({ allMoviesFilter: filteredMovies });

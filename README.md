@@ -1,7 +1,7 @@
 # React + Vite
 
 ReactJs/Zustand/themoviedb
-Projet disponible :https://illshaad-forpass.netlify.app/
+Projet disponible :https://illshaad-movie.netlify.app/
 
 # Lancer le projet
 

@@ -11,11 +11,8 @@ const options = {
 };
 
 const SortAndGroupByYear = (movies) => {
-  const compareDates = (a, b) => {
-    const releaseDateA = new Date(a.release_date);
-    const releaseDateB = new Date(b.release_date);
-    return releaseDateA - releaseDateB;
-  };
+  const compareDates = (a, b) =>
+    new Date(a.release_date) - new Date(b.release_date);
 
   const movieSort = movies.sort(compareDates);
   const MovieByYear = [];

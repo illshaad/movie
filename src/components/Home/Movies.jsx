@@ -89,5 +89,5 @@ export default function Movies({ isBooleanValue }) {
 }
 
 Movies.propTypes = {
-  isBooleanValue: PropTypes.bool.isRequired,
+  isBooleanValue: PropTypes.bool,
 };

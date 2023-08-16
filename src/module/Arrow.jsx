@@ -21,16 +21,19 @@ export default function Arrow({
     height: "60px",
   };
 
+  const handleClickDirection = () => {
+    if (direction === "left") {
+      prevMovies(currentIndex, setCurrentIndex, fourMovies);
+    } else {
+      nextMovies(currentIndex, setCurrentIndex, fourMovies);
+    }
+  };
+
+  const arrowSymbol = direction === "left" ? "\u2190" : "\u2192";
+
   return (
-    <button
-      style={buttonStyle}
-      onClick={() =>
-        direction === "left"
-          ? prevMovies(currentIndex, setCurrentIndex, fourMovies)
-          : nextMovies(currentIndex, setCurrentIndex, fourMovies)
-      }
-    >
-      {direction === "left" ? "\u2190" : "\u2192"}
+    <button style={buttonStyle} onClick={handleClickDirection}>
+      {arrowSymbol}
     </button>
   );
 }
